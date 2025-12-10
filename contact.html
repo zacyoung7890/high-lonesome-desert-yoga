@@ -1,0 +1,38 @@
+
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Contact — High Lonesome Desert Yoga</title><link rel='stylesheet' href='styles.css'></head><body>
+<header><div class='navbar'><a class='brand' href='index.html'><img src='logo.svg' alt='High Lonesome Desert Yoga logo' style='width:36px;height:36px;border-radius:6px;'><div><div class='title'>High Lonesome Desert Yoga</div><div class='subtitle'>Private Yoga with Chelsea Young</div></div></a><nav class='navlinks'><a href='index.html'>Home</a><a href='classes.html'>Classes</a><a href='about.html'>About</a><a href='contact.html'>Contact</a></nav></div></header>
+<main class='container'><h1 class='section-title'>Book a Private Session</h1><p>Tell Chelsea a bit about your goals and any preferences. She’ll reply with available times and suggested approaches.</p>
+<div class='form'>
+<form id='contact-form' action='https://formspree.io/f/YOUR_FORM_ID' method='POST'>
+  <label for='name'>Name</label>
+  <input id='name' name='Name' type='text' placeholder='Your full name' required />
+  <label for='email'>Email</label>
+  <input id='email' name='Email' type='email' placeholder='you@example.com' required />
+  <label for='message'>Message</label>
+  <textarea id='message' name='Message' rows='6' placeholder='What would you like to focus on? (e.g., mobility, stress release, prenatal, breathwork)' required></textarea>
+  <input type='hidden' name='_subject' value='New Inquiry — High Lonesome Desert Yoga' />
+  <input type='hidden' name='_redirect' value='thank-you.html' />
+  <input type='text' name='_gotcha' style='display:none' tabindex='-1' autocomplete='off' />
+  <button type='submit'>Send Inquiry</button>
+</form>
+<p style='margin-top:8px;color:#666;'>Prefer to email directly? <a href='mailto:yogaismylight@gmail.com'>yogaismylight@gmail.com</a></p>
+<p style='margin-top:4px;color:#666;'>Instagram (optional): <a href='#'>@highlonesomeyoga</a></p>
+</div>
+<script>
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      if (res.ok) { alert('Thanks! Your inquiry was sent. We’ll be in touch soon.'); form.reset(); }
+      else { alert('There was a problem sending. Please try again or email yogaismylight@gmail.com.'); }
+    } catch (err) {
+      alert('Network error. Please try again or email yogaismylight@gmail.com.');
+    }
+  });
+}
+</script>
+</main>
+<footer><div class='container footer-inner'><p>© High Lonesome Desert Yoga — Chelsea Young</p><p><img src='moon.svg' alt='moon' style='width:20px;height:20px;vertical-align:middle;'> Practice under the moon • Shine with the sun</p></div></footer></body></html>
