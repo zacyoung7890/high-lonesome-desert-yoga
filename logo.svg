@@ -1,0 +1,20 @@
+
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
+  <defs>
+    <linearGradient id='sunrise' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#FFD36E'/>
+      <stop offset='100%' stop-color='#FFF7E9'/>
+    </linearGradient>
+  </defs>
+  <rect width='120' height='120' fill='url(#sunrise)'/>
+  <circle cx='85' cy='35' r='16' fill='white' opacity='0.9'/>
+  <circle cx='90' cy='32' r='4' fill='#E9E9E9'/>
+  <path d='M0 80 Q 60 70 120 80 L120 120 L0 120 Z' fill='#E9A9A9' opacity='0.35'/>
+  <g transform='translate(40,65)'>
+    <rect x='8' y='8' width='6' height='26' fill='#8FB996'/>
+    <rect x='6' y='12' width='4' height='12' fill='#8FB996'/>
+    <rect x='14' y='16' width='4' height='10' fill='#8FB996'/>
+  </g>
+  <text x='10' y='25' font-size='10' font-family='Playfair Display' fill='#0A2E5C'>High Lonesome</text>
+  <text x='10' y='40' font-size='16' font-family='Playfair Display' fill='#0A2E5C'>Desert Yoga</text>
+</svg>
